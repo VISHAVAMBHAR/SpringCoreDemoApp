@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<!-- <context:annotation-config/> <context:component-scan base-package="com.demo"/> -->
+
+	<bean id="dep1" class="com.demo2.Department">
+		<property name="dptId" value="1" />
+		<property name="dptName" value="Admin" />
+	</bean>
+
+	<bean id="dep2" class="com.demo2.Department">
+		<property name="dptId" value="2" />
+		<property name="dptName" value="IT" />
+	</bean> 
+
+	<bean id="emp1" class="com.demo2.Employee">
+		<property name="empId" value="102" />
+		<property name="empName" value="ram" />
+	</bean>
+
+
+</beans> 

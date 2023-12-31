@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <context:annotation-config/> <context:component-scan base-package="com.demo"/> -->
+
+	<bean id="emp1" class="com.demo.Employee" />
+	<bean id="emp2" class="com.demo.Employee">
+		<property name="empId" value="101"></property>
+		<property name="empName" value="Sagar"></property>
+		<property name="empDep" value="IT"></property>
+	</bean>
+
+	<bean id="emp3" class="com.demo.Employee">
+		<constructor-arg name="empId" value="110"></constructor-arg>
+		<constructor-arg name="empName" value="Krushna"></constructor-arg>
+		<constructor-arg name="empDep" value="Dev"></constructor-arg>
+		<constructor-arg name="department" ref="dep1"/>
+	</bean>
+
+	<bean id="dep1" class="com.demo.Department">
+		<constructor-arg name="depId" value="200"></constructor-arg>
+		<constructor-arg name="depName" value="Info-Tech"></constructor-arg>
+		<constructor-arg name="depLoc" value="Pune"></constructor-arg>
+	</bean>
+
+
+</beans>
